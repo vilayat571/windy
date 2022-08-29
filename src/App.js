@@ -1,11 +1,14 @@
-import React from 'react'
+import React from "react";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Weather from "./pages/Weather";
 
 function App() {
   return (
-    <div>
-      <h1>App </h1>
-    </div>
-  )
+    <BrowserRouter>
+      <Routes>
+        <Route exact path="/" element={<Weather />} />
+      </Routes>
+    </BrowserRouter>
+  );
 }
-
-export default App
+export default App;

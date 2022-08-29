@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito&family=Poppins:wght@200&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -8,10 +8,12 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
 }
 
 body {
-  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
 }
 
 html {
