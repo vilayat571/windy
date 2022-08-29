@@ -2,7 +2,7 @@ import React from 'react';
 import Sidebar from '../components/Sidebar';
 import '../assets/styles/index.css';
 import { useSelector } from 'react-redux';
-import { Link } from 'react-router-dom';
+
 
 function Layout({ children }) {
     const isDark = useSelector((state) => state.changeStatusReduer.isDark);
@@ -17,7 +17,7 @@ function Layout({ children }) {
                     <div className='flex justify-center items-center text-white text-3xl h-screen bg-[#131313]'>
                        <div className='flex justify-between h-1/12 flex-col items-center'>
                        <div>
-                          Oops, city not found ...
+                          Oops, city not found ..
                         </div>
                         <button className='border-[1px] px-4 py-2 text-lg mt-6' onClick={()=>refreshPage()}>
                         Try for again
