@@ -14,4 +14,4 @@ function Cover() {
     )
 }
 
-export default Cover
+export default React.memo(Cover);

@@ -38,4 +38,4 @@ function Middle() {
   )
 }
 
-export default Middle
+export default React.memo(Middle)
