@@ -1,12 +1,14 @@
 import React from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import Logo from '../atoms/Logo'
+import Tbutton from './Tbutton'
 import { changeDegree } from '../redux/changeDegreReducer';
 import { changeStatus } from '../redux/changeStatusReduer';
 
 function Navbar() {
   const dispatch = useDispatch();
   const isDark = useSelector((state) => state.changeStatusReduer.isDark);
+  const isKelvin = useSelector((state) => state.changeDegreReducer.isKelvin);
 
   const handleClick = () => {
     dispatch(changeStatus(isDark));
@@ -21,15 +23,14 @@ function Navbar() {
   };
 
   return (
+    
     <div className='flex w-full justify-between items-center'>
+      
       <Logo />
       <div className='flex w-56 justify-between items-center text-sm'>
-        <button onClick={() => changetoKelvin()}
-          className={isDark ? ' px-3 py-2 rounded-full shadow bg-white text-black  '
-            : ' px-3 py-2 rounded-full shadow bg-black text-white  '}>C °</button>
-        <button onClick={() => changetoSelsi()}
-          className={isDark ? ' px-3 py-2 rounded-full shadow-3xl bg-[#161616] text-white  '
-            : 'px-3 py-2 rounded-full shadow-md bg-[#fcfcfc] text-black   '}>K °</button>
+      
+        <Tbutton isKelvin={isKelvin} isDark={isDark} changetoKelvin={changetoKelvin} degree="C" />
+        <Tbutton isKelvin={isKelvin} isDark={isDark} changetoKelvin={changetoSelsi} degree="K" />
         <button onClick={() => handleClick()} className={isDark ? "far fa-sun text-xl" : "far fa-moon text-xl"}>
 
         </button>

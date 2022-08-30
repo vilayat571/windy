@@ -13,4 +13,4 @@ function Card({ text, data }) {
     )
 }
 
-export default React.memo;
+export default React.memo(Card);
